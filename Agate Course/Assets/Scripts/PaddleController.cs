@@ -5,12 +5,13 @@ using UnityEngine;
 public class PaddleController : MonoBehaviour
 {
     //input speed
-    public int speed;
+    public float speed;
     //input atas bawah
     public KeyCode Upkey;
     public KeyCode downkey;
     //rigbody
     private Rigidbody2D rig;
+   
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -30,5 +31,10 @@ public class PaddleController : MonoBehaviour
             movement = Vector2.down * speed;
         }
         rig.velocity = movement;
+    }
+    public void PowerUpPaddle(float kali)
+
+    {
+        speed *= kali;
     }
 }

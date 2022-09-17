@@ -10,9 +10,9 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
-    public void OpenAuthor()
+    public void CreditScene()
     {
-        Debug.Log("Created By Farid Nurtaufiq");
+        SceneManager.LoadScene("Credit Scene");
     }
 
     public void Exit()
